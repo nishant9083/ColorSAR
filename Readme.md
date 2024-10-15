@@ -1,8 +1,13 @@
 # ColorSAR: SAR Image Colorization
 
 ## SAR Image Colorization using Deep Learning
+
 ### Project Overview
 This project aims to develop a deep learning model for colorizing grayscale Synthetic Aperture Radar (SAR) images. SAR images are typically represented in grayscale and lack the natural color information present in standard optical images. Our project enhances the interpretability of these images by converting them into colorized versions, which are useful for applications such as geological studies, environmental monitoring, and surface feature analysis.
+
+#### **What are SAR Images?**
+Synthetic Aperture Radar (SAR) images are produced by radar systems that utilize microwave signals to create detailed images of the Earth's surface. Unlike traditional optical imaging, SAR operates independently of sunlight and can penetrate through clouds, providing valuable data for various remote sensing applications. However, SAR images are generally monochromatic and do not convey color information, which can limit their usability in certain analyses. Colorization can help reveal features that are not easily distinguishable in grayscale images, improving interpretability and analysis.
+
 
 ### **Project Workflow**
 
