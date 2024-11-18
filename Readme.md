@@ -15,7 +15,7 @@ Synthetic Aperture Radar (SAR) images are produced by radar systems that utilize
 
 ### **Project Workflow**
 
-<img src="https://github.com/user-attachments/assets/6e280a7a-e9fd-4fc4-b810-4fddf56a57cd" alt="Flow" style="background-color:white">
+<img src="https://github.com/user-attachments/assets/6e280a7a-e9fd-4fc4-b810-4fddf56a57cd" alt="Flow" style="background-color:gray">
 
 
 
@@ -60,11 +60,11 @@ In this section, we compare the results of two different trained models. Each mo
 
 *In this model, training was conducted on the **L** channel of noisy, uncolored SAR images after applying denoising, combined with the **AB** channel of original color SAR images as input-output pairs. Consequently, while the color prediction remains fairly good, the overall results do not match the original due to the noise present in the **L** channel. This noise has impacted the preservation of structural definition in the images, leading to less accurate representations compared to Model 1.*
 
-#### **Comparison Summary**
+## **Comparison Summary**
 - **Model 1** demonstrates superior color accuracy due to the use of original color data, effectively proving the robustness of the colorization model.
 - **Model 2**, while showing decent color predictions, suffers from structural fidelity issues caused by noise in the luminance channel, indicating that further refinement in denoising processes may be necessary for future iterations.
 
-### **Future Work**
+## **Future Work**
 - **Improving Denoising**: Enhance the denoising techniques to reduce noise in the SAR images, ensuring cleaner inputs and more accurate colorization.\
 - **Extended Evaluation**: Perform a comprehensive evaluation using additional metrics and visual inspection to ensure high-quality results.
 - **Final Predictions**: Generate the final set of colorized SAR images using the improved model.
@@ -86,8 +86,7 @@ We thank the following people for their contributions to this project:
 - [Aditya Bajpai](https://github.com/Aditya-117)
 
 
-### Acknowledgment
-
+## Acknowledgment
 This project utilizes concepts and techniques from the following paper:
 
 **Automatic Image Colorization using Ensemble of Deep Convolutional Neural Networks**  
