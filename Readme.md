@@ -79,7 +79,7 @@ We have evaluated on the following metrics:
 - A higher PSNR value indicates better reconstruction quality (less error between the denoised and clean images).
 
 **Typical ranges for PSNR**:
-- >30 dB: Excellent quality (almost indistinguishable from the ground truth).
+- \>30 dB: Excellent quality (almost indistinguishable from the ground truth).
 - 25–30 dB: Good quality, some perceptible noise.
 - <25 dB: Noticeable degradation in quality.
 
@@ -94,15 +94,15 @@ We have evaluated on the following metrics:
 - High SSIM (close to 1) means that the structural and visual content of the denoised image is very similar to the clean image.
 
 **Values**:
-- >0.95: Excellent structural similarity.
+- \>0.95: Excellent structural similarity.
 - 0.85–0.95: Good similarity but some structural loss.
 - <0.85: Noticeable structural degradation.
 
-### **Model 1 Results**: 
+### **Model 1 Results:**: 
 - **PSNR**: 29.9230
 - **SSIM**: 0.9400
 
-### **Model 2 Results**
+### **Model 2 Results:**
 - **PSNR**: 14.4466
 - **SSIM**: 0.2314
 
@@ -113,7 +113,7 @@ We have evaluated on the following metrics:
 
 
 ## **Future Work**
-- **Improving Denoising**: Enhance the denoising techniques to reduce noise in the SAR images, ensuring cleaner inputs and more accurate colorization.\
+- **Improving Denoising**: Enhance the denoising techniques to reduce noise in the SAR images, ensuring cleaner inputs and more accurate colorization.
 - **Extended Evaluation**: Perform a comprehensive evaluation using additional metrics and visual inspection to ensure high-quality results.
 - **Final Predictions**: Generate the final set of colorized SAR images using the improved model.
  
@@ -132,6 +132,7 @@ We thank the following people for their contributions to this project:
 - [Ojus Goel](https://github.com/ojusgoel)
 - [Janmay Patel](https://github.com/janmay2910)
 - [Aditya Bajpai](https://github.com/Aditya-117)
+- [Nishant Verma](https://github.com/nishant9083)
 
 
 ## Acknowledgment
