@@ -17,6 +17,13 @@ Synthetic Aperture Radar (SAR) images are produced by radar systems that utilize
 
 <img src="https://github.com/user-attachments/assets/6e280a7a-e9fd-4fc4-b810-4fddf56a57cd" alt="Flow" style="background-color:gray">
 
+### Repository Files
+- `Our_Research` folder contains the methods and our work/implementation on different parts during the project implementation.
+- `ML_PROJECT_P2.ipynb` is the submission of phase 2 of our project.
+- `ColorSAR_Project_Report.pdf` is the report file of our project phase 2 submission.
+- `original_model.ipynb` contains the implementation of **Training-1** as shown in the above workflow.
+- `gray_model.ipynb` is the implementation of **Training-2** as shown in the above workflow.
+- Other files contain the changes we try in the original model architecture as mentioned in the paper.
 
 
 #### **Step 1: Load and Slice Images into Patches**
@@ -64,6 +71,44 @@ In this section, we compare the results of two different trained models. Each mo
 - **Model 1** demonstrates superior color accuracy due to the use of original color data, effectively proving the robustness of the colorization model.
 - **Model 2**, while showing decent color predictions, suffers from structural fidelity issues caused by noise in the luminance channel, indicating that further refinement in denoising processes may be necessary for future iterations.
 
+## **Evaluation**
+We have evaluated on the following metrics:
+
+### Peak Signal-to-Noise Ratio (PSNR)
+**Definition**: PSNR measures the similarity between the denoised image and the ground truth, in terms of pixel intensity values. It is expressed in decibels (dB).
+
+**Interpretation**:
+- A higher PSNR value indicates better reconstruction quality (less error between the denoised and clean images).
+
+**Typical ranges for PSNR**:
+- >30 dB: Excellent quality (almost indistinguishable from the ground truth).
+- 25–30 dB: Good quality, some perceptible noise.
+- <25 dB: Noticeable degradation in quality.
+
+### Structural Similarity Index (SSIM)
+**Definition**: SSIM measures the perceptual similarity between the denoised image and the ground truth, accounting for luminance, contrast, and structure.
+
+**Range**: SSIM values range from 0 to 1, where:
+- 1.0: Perfect match to the ground truth.
+- 0.0: No similarity to the ground truth.
+
+**Interpretation**:
+- High SSIM (close to 1) means that the structural and visual content of the denoised image is very similar to the clean image.
+
+**Values**:
+- >0.95: Excellent structural similarity.
+- 0.85–0.95: Good similarity but some structural loss.
+- <0.85: Noticeable structural degradation.
+
+### **Model 1 Results**: 
+- **PSNR**: 29.9230
+- **SSIM**: 0.9400
+
+### **Model 2 Results**
+- **PSNR**: 14.4466
+- **SSIM**: 0.2314
+
+
 ## **Future Work**
 - **Improving Denoising**: Enhance the denoising techniques to reduce noise in the SAR images, ensuring cleaner inputs and more accurate colorization.\
 - **Extended Evaluation**: Perform a comprehensive evaluation using additional metrics and visual inspection to ensure high-quality results.
@@ -95,4 +140,3 @@ Urvi Oza\*, Arpit Pipara†, Srimanta Mandal‡, and Pankaj Kumar§
 \*201921009@daiict.ac.in, †201911030@daiict.ac.in, ‡in.srimanta.mandal@ieee.org  
 § University of Petroleum and Energy Studies (UPES), Bidholi, Dehradun, India  
 pankaj.k@ddn.upes.ac.in
-
