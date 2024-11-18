@@ -51,7 +51,7 @@ Synthetic Aperture Radar (SAR) images are produced by radar systems that utilize
 
 In this section, we compare the results of two different trained models. Each model has been evaluated based on its performance in colorizing the SAR images. Below are the images produced by each model, showcasing the differences in colorization quality and accuracy.
 
-#### **Model 1: Trained on L and AB Channels of Original Color SAR Images**
+#### **Model 1 (Training-1): Trained on L and AB Channels of Original Color SAR Images**
 
 ![Model 1 Result](https://github.com/user-attachments/assets/df049178-7010-4e2a-ba98-065e963bdaa7)
 ![Model 1 Result2](https://github.com/user-attachments/assets/6fabe51c-476c-4f10-b8f7-4c93e31534c1)
@@ -59,7 +59,7 @@ In this section, we compare the results of two different trained models. Each mo
 
 *This model was trained using both the **L** (luminance) and **AB** (chrominance) channels of original color SAR images as input-output pairs. As a result, the colorization output is highly accurate, demonstrating that this model effectively captures the underlying color information. The successful performance in this model proves the efficacy of the colorization approach.*
 
-#### **Model 2: Trained on L Channel of Noisy, Uncolored SAR Images (Post-Denoising) with AB Channel of Original Color SAR Images**
+#### **Model 2 (Training-2): Trained on L Channel of Noisy, Uncolored SAR Images (Post-Denoising) with AB Channel of Original Color SAR Images**
 
 ![Model 2 Result](https://github.com/user-attachments/assets/e5716ae3-d267-40d2-ab6c-a369d55c7f9f)
 ![Model 2 Result2](https://github.com/user-attachments/assets/377bdffa-ca74-44a2-b93b-7802f9c1b6e2)
@@ -67,9 +67,7 @@ In this section, we compare the results of two different trained models. Each mo
 
 *In this model, training was conducted on the **L** channel of noisy, uncolored SAR images after applying denoising, combined with the **AB** channel of original color SAR images as input-output pairs. Consequently, while the color prediction remains fairly good, the overall results do not match the original due to the noise present in the **L** channel. This noise has impacted the preservation of structural definition in the images, leading to less accurate representations compared to Model 1.*
 
-## **Comparison Summary**
-- **Model 1** demonstrates superior color accuracy due to the use of original color data, effectively proving the robustness of the colorization model.
-- **Model 2**, while showing decent color predictions, suffers from structural fidelity issues caused by noise in the luminance channel, indicating that further refinement in denoising processes may be necessary for future iterations.
+Note: More results can be seen in the images folder.
 
 ## **Evaluation**
 We have evaluated on the following metrics:
@@ -107,6 +105,11 @@ We have evaluated on the following metrics:
 ### **Model 2 Results**
 - **PSNR**: 14.4466
 - **SSIM**: 0.2314
+
+
+## **Comparison Summary**
+- **Model 1** demonstrates superior color accuracy due to the use of original L channel, effectively proving the robustness of the colorization model.
+- **Model 2**, while showing decent color predictions, suffers from structural fidelity issues caused by noise in the luminance channel, indicating that further refinement in denoising processes may be necessary for future iterations.
 
 
 ## **Future Work**
