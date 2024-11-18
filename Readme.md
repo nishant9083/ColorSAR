@@ -9,9 +9,14 @@ This project aims to develop a deep learning model for colorizing grayscale Synt
 Synthetic Aperture Radar (SAR) images are produced by radar systems that utilize microwave signals to create detailed images of the Earth's surface. Unlike traditional optical imaging, SAR operates independently of sunlight and can penetrate through clouds, providing valuable data for various remote sensing applications. However, SAR images are generally monochromatic and do not convey color information, which can limit their usability in certain analyses. Colorization can help reveal features that are not easily distinguishable in grayscale images, improving interpretability and analysis.
 
 
+### **Model Architecture**
+![alt Architectue](./images/image.png)
+
+
 ### **Project Workflow**
 
-![Workflow](https://github.com/user-attachments/assets/6e280a7a-e9fd-4fc4-b810-4fddf56a57cd)
+<img src="https://github.com/user-attachments/assets/6e280a7a-e9fd-4fc4-b810-4fddf56a57cd" alt="Flow" style="background-color:white">
+
 
 
 #### **Step 1: Load and Slice Images into Patches**
@@ -72,3 +77,23 @@ In this section, we compare the results of two different trained models. Each mo
 - Matplotlib 
 - Pillow
 - Scipy Image
+
+## Contributors
+We thank the following people for their contributions to this project:
+- [Nishchay Rajput](https://github.com/NishchayRajput)
+- [Ojus Goel](https://github.com/ojusgoel)
+- [Janmay Patel](https://github.com/janmay2910)
+- [Aditya Bajpai](https://github.com/Aditya-117)
+
+
+### Acknowledgment
+
+This project utilizes concepts and techniques from the following paper:
+
+**Automatic Image Colorization using Ensemble of Deep Convolutional Neural Networks**  
+Urvi Oza\*, Arpit Pipara†, Srimanta Mandal‡, and Pankaj Kumar§  
+\*†‡ Dhirubhai Ambani Institute of Information Communication Technology (DAIICT), Gandhinagar, India  
+\*201921009@daiict.ac.in, †201911030@daiict.ac.in, ‡in.srimanta.mandal@ieee.org  
+§ University of Petroleum and Energy Studies (UPES), Bidholi, Dehradun, India  
+pankaj.k@ddn.upes.ac.in
+
