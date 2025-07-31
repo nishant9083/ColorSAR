@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorSAR - SAR Image Colorization</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">ColorSAR</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ColorSAR</h1>
+            <p>Machine Learning for SAR Image Colorization and Denoising</p>
+            <a href="#about" class="cta-button">Explore Project</a>
+        </div>
+    </section>
+    
+    <div class="main-content">
+        <section class="section" id="about">
+            <h2>About the Project</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                This cutting-edge project explores machine learning models for Synthetic Aperture Radar (SAR) 
+                image colorization and denoising. Our research combines state-of-the-art deep learning techniques with 
+                comprehensive evaluation metrics to achieve superior image processing results.
+            </p>
+        </section>
+        
+        <section class="section" id="models">
+            <h2>Project Components</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="icon"><i class="fas fa-brain"></i></div>
+                    <h3>Original Model (Training 1)</h3>
+                    <p>Trained on L and AB channels of original color SAR images, this model achieves highly accurate colorization by effectively capturing underlying color information from clean input-output pairs.</p>
+                </div>
+                <div class="project-card">
+                    <div class="icon"><i class="fas fa-palette"></i></div>
+                    <h3>Gray Model (Training 2)</h3>
+                    <p>Trained on L channel of noisy, denoised SAR images with AB channel of original images. Shows good color prediction but reduced structural definition due to residual noise impact.</p>
+                </div>
+                <div class="project-card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Training Pipeline</h3>
+                    <p>Comprehensive training notebooks with detailed methodology, hyperparameter tuning, and performance analysis.</p>
+                </div>
+                <div class="project-card">
+                    <div class="icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Research Lab</h3>
+                    <p>Experimental notebooks exploring denoising techniques, FFDNet implementation, and model comparisons.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/image.png" alt="Sample Image">
+                    <div class="gallery-overlay">
+                        <h4>Model Architecture</h4>
+                        <p>Colorization pipeline</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/gray_model/1.png" alt="Gray Model Result 1">
+                    <div class="gallery-overlay">
+                        <h4>Gray Model Output</h4>
+                        <p>Enhanced grayscale processing</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/gray_model/2.png" alt="Gray Model Result 2">
+                    <div class="gallery-overlay">
+                        <h4>Gray Model Output</h4>
+                        <p>Noise reduction applied</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/gray_model/3.png" alt="Gray Model Result 3">
+                    <div class="gallery-overlay">
+                        <h4>Gray Model Output</h4>
+                        <p>Feature enhancement</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/original_model/1.jpeg" alt="Original Model Result 1">
+                    <div class="gallery-overlay">
+                        <h4>Original Model Output</h4>
+                        <p>Full colorization result</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/original_model/2.jpeg" alt="Original Model Result 2">
+                    <div class="gallery-overlay">
+                        <h4>Original Model Output</h4>
+                        <p>Advanced color mapping</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/original_model/3.jpeg" alt="Original Model Result 3">
+                    <div class="gallery-overlay">
+                        <h4>Original Model Output</h4>
+                        <p>High-fidelity reconstruction</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/original_model/4.jpeg" alt="Original Model Result 4">
+                    <div class="gallery-overlay">
+                        <h4>Original Model Output</h4>
+                        <p>Detail preservation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/model_results/original_model/5.jpeg" alt="Original Model Result 5">
+                    <div class="gallery-overlay">
+                        <h4>Original Model Output</h4>
+                        <p>Optimal color balance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="resources">
+            <h2>Project Resources</h2>
+            <div class="resources">
+                <a href="ColorSAR_Project_Report.pdf" target="_blank" class="resource-link">
+                    <div class="resource-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div>
+                        <h3>Project Report</h3>
+                        <p>Comprehensive technical documentation and analysis</p>
+                    </div>
+                </a>
+                <a href="Presentation.pdf" target="_blank" class="resource-link">
+                    <div class="resource-icon"><i class="fas fa-presentation-screen"></i></div>
+                    <div>
+                        <h3>Presentation Slides</h3>
+                        <p>Executive summary and key findings</p>
+                    </div>
+                </a>
+                <a href="https://github.com/nishant9083/ColorSAR" target="_blank" class="resource-link">
+                    <div class="resource-icon"><i class="fab fa-github"></i></div>
+                    <div>
+                        <h3>GitHub Repository</h3>
+                        <p>Complete source code and implementation</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <section class="section" id="references">
+            <h2>Research References</h2>
+            <div class="references-container">
+                <div class="reference-item">
+                    <div class="reference-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="reference-content">
+                        <h3><a style="color: lightskyblue;" href="https://ieeexplore.ieee.org/document/9864479" target="_blank">Automatic Image Colorization using Ensemble of Deep Convolutional Neural Networks</a></h3>
+                        <p class="reference-authors">Urvi Oza, Arpit Pipara, Srimanta Mandal, & Pankaj Kumar</p>
+                        <p class="reference-journal">Dhirubhai Ambani Institute of Information Communication Technology (DAIICT) & University of Petroleum and Energy Studies (UPES)</p>
+                        <p class="reference-description">Research on ensemble methods using deep convolutional neural networks for automatic image colorization, exploring multiple CNN architectures for improved color prediction accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 ColorSAR Project Team | Advanced SAR Image Processing Research</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="lightbox-img" src="" alt="">
+            <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</button>
+            <div class="lightbox-info">
+                <h4 id="lightbox-title"></h4>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        // Gallery images data
+        const galleryImages = [
+            {
+                src: 'images/image.png',
+                title: 'Sample Input',
+                description: 'Original SAR image data'
+            },
+            {
+                src: 'images/model_results/gray_model/1.png',
+                title: 'Gray Model Output',
+                description: 'Enhanced grayscale processing'
+            },
+            {
+                src: 'images/model_results/gray_model/2.png',
+                title: 'Gray Model Output',
+                description: 'Noise reduction applied'
+            },
+            {
+                src: 'images/model_results/gray_model/3.png',
+                title: 'Gray Model Output',
+                description: 'Feature enhancement'
+            },
+            {
+                src: 'images/model_results/original_model/1.jpeg',
+                title: 'Original Model Output',
+                description: 'Full colorization result'
+            },
+            {
+                src: 'images/model_results/original_model/2.jpeg',
+                title: 'Original Model Output',
+                description: 'Advanced color mapping'
+            },
+            {
+                src: 'images/model_results/original_model/3.jpeg',
+                title: 'Original Model Output',
+                description: 'High-fidelity reconstruction'
+            },
+            {
+                src: 'images/model_results/original_model/4.jpeg',
+                title: 'Original Model Output',
+                description: 'Detail preservation'
+            },
+            {
+                src: 'images/model_results/original_model/5.jpeg',
+                title: 'Original Model Output',
+                description: 'Optimal color balance'
+            }
+        ];
+
+        let currentImageIndex = 0;
+
+        // Initialize gallery click events
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index));
+            });
+        });
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDescription = document.getElementById('lightbox-description');
+
+            lightboxImg.src = galleryImages[index].src;
+            lightboxTitle.textContent = galleryImages[index].title;
+            lightboxDescription.textContent = galleryImages[index].description;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDescription = document.getElementById('lightbox-description');
+
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            lightboxTitle.textContent = galleryImages[currentImageIndex].title;
+            lightboxDescription.textContent = galleryImages[currentImageIndex].description;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    changeImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeImage(1);
+                }
+            }
+        });
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.98)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
